@@ -48,7 +48,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Gets the <c><see cref="EarthState"/></c> for the latest frame.
         /// </summary>
-        public EarthState EarthState
+        public virtual EarthState EarthState
         {
             get
             {
@@ -72,7 +72,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Gets the tracking state of Earth for the latest frame.
         /// </summary>
-        public TrackingState EarthTrackingState
+        public virtual TrackingState EarthTrackingState
         {
             get
             {
@@ -97,7 +97,7 @@ namespace Google.XR.ARCoreExtensions
         /// <c><see cref="EarthTrackingState"/></c> is <c><see cref="TrackingState.Tracking"/></c>;
         /// otherwise, it should not be used.
         /// </summary>
-        public GeospatialPose CameraGeospatialPose
+        public virtual GeospatialPose CameraGeospatialPose
         {
             get
             {
@@ -206,7 +206,7 @@ namespace Google.XR.ARCoreExtensions
         /// It will return <c><see cref="FeatureSupported.Unknown"/></c> if the session is still
         /// under initialization.
         /// </returns>
-        public FeatureSupported IsGeospatialModeSupported(GeospatialMode mode)
+        public virtual FeatureSupported IsGeospatialModeSupported(GeospatialMode mode)
         {
             if (ARCoreExtensions._instance.currentARCoreSessionHandle == IntPtr.Zero)
             {

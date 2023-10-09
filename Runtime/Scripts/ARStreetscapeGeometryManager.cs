@@ -60,7 +60,7 @@ namespace Google.XR.ARCoreExtensions
         /// <summary>
         /// Unity's Update() method.
         /// </summary>
-        public void Update()
+        public virtual void Update()
         {
             if (ARCoreExtensions._instance.currentARCoreSessionHandle == IntPtr.Zero)
             {
